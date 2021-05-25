@@ -122,4 +122,4 @@ const EventsInfo = () => {
   );
 };
 
-export default EventsInfo;
+export default React.memo(EventsInfo);

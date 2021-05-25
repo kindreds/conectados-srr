@@ -93,4 +93,4 @@ const Sidebar = ({ isOpen, onToggle }) => {
   );
 };
 
-export default Sidebar;
+export default React.memo(Sidebar);

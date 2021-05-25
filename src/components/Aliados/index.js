@@ -55,4 +55,4 @@ const Aliados = () => {
   );
 };
 
-export default Aliados;
+export default React.memo(Aliados);

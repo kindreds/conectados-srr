@@ -80,4 +80,4 @@ const Speakers = () => {
   );
 };
 
-export default Speakers;
+export default React.memo(Speakers);

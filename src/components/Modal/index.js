@@ -98,4 +98,4 @@ const Modal = ({ id, onToggle, isOpen, finalRef }) => {
   );
 };
 
-export default Modal;
+export default React.memo(Modal);

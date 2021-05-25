@@ -114,4 +114,4 @@ Navbar.propTypes = {
   onToggle: PropTypes.func,
 };
 
-export default Navbar;
+export default React.memo(Navbar);

@@ -159,4 +159,4 @@ const Countdown = () => {
   );
 };
 
-export default Countdown;
+export default React.memo(Countdown);
