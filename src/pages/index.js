@@ -1,21 +1,17 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import dynamic from 'next/dynamic';
 import { Image } from '@chakra-ui/image';
 import { SlideFade } from '@chakra-ui/transition';
+import { useInView } from 'react-intersection-observer';
 import { Container, Heading, Box, Divider, Grid } from '@chakra-ui/layout';
 
 import Hero from '../components/Hero';
 import Info from '../components/Info';
 import Navbar from '../components/Navbar';
-// import Aliados from '../components/Aliados';
-// import Section from '../components/Section';
-// import Speakers from '../components/Speakers';
-// import Schedule from '../components/Schedule';
 import Countdown from '../components/Countdown';
 import EventsInfo from '../components/EventsInfo';
 import InfoSection from '../components/Section/InfoSection';
 
-import useIntersected from '../hooks/useIntersected';
 import { congreso, metodologia } from '../components/Section/data';
 
 const UTEC_LOGO = './utec.png';
@@ -34,8 +30,7 @@ const Section = dynamic(() => import('../components/Section'), { ssr: false });
 const Aliados = dynamic(() => import('../components/Aliados'), { ssr: false });
 
 const Index = () => {
-  const node = useRef();
-  const { show } = useIntersected({ node, margin: '0px' });
+  const { inView: show, ref: node } = useInView();
 
   return (
     <>

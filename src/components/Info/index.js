@@ -1,17 +1,16 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { Image } from '@chakra-ui/image';
+import { ScaleFade, SlideFade } from '@chakra-ui/transition';
 import { Box, Flex, Heading, Text, Stack } from '@chakra-ui/layout';
 
-import useIntersected from '../../hooks/useIntersected';
-import { ScaleFade, SlideFade } from '@chakra-ui/transition';
+import { useInView } from 'react-intersection-observer';
 
 const recurso1 = './recurso1.svg';
 const recurso2 = './recurso2.svg';
 const recurso3 = './recurso3.svg';
 
 const Info = () => {
-  const node = useRef();
-  const { show } = useIntersected({ node, margin: '-10px' });
+  const { inView: show, ref: node } = useInView();
 
   return (
     <Stack

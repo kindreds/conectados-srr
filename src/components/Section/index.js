@@ -1,9 +1,9 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { Button } from '@chakra-ui/button';
 import { Container, Heading, Text, Box } from '@chakra-ui/layout';
 
 import { ScaleFade } from '@chakra-ui/transition';
-import useIntersected from '../../hooks/useIntersected';
+import { useInView } from 'react-intersection-observer';
 
 const Section = ({
   id,
@@ -16,8 +16,7 @@ const Section = ({
   fileName,
   children,
 }) => {
-  const node = useRef();
-  const { show } = useIntersected({ node, margin: '0px' });
+  const { inView: show, ref: node } = useInView();
 
   return (
     <Box bg={color === 'primary' ? 'bgGray' : 'bgWhite'}>

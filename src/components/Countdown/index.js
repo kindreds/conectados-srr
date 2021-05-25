@@ -1,12 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { Stack, Flex, Text } from '@chakra-ui/layout';
-import useIntersected from '../../hooks/useIntersected';
+import React, { useEffect, useState } from 'react';
 import { SlideFade } from '@chakra-ui/transition';
+import { Stack, Flex, Text } from '@chakra-ui/layout';
+import { useInView } from 'react-intersection-observer';
 
 const Countdown = () => {
-  const node = useRef();
   const [isDone, setIsDone] = useState(false);
-  const { show } = useIntersected({ node, margin: '0px' });
+  const { ref: node, inView: show } = useInView();
 
   useEffect(() => {
     handlerCD();

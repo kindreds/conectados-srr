@@ -1,5 +1,4 @@
-import React, { useRef } from 'react';
-import { Tab, Tabs, TabPanel, TabPanels, TabList } from '@chakra-ui/tabs';
+import React from 'react';
 import {
   Text,
   Flex,
@@ -9,10 +8,13 @@ import {
   Container,
   StackDivider,
 } from '@chakra-ui/layout';
-import { Button } from '@chakra-ui/button';
 import { Image } from '@chakra-ui/image';
+import { Button } from '@chakra-ui/button';
 import { Fade } from '@chakra-ui/transition';
 import { Accordion } from '@chakra-ui/accordion';
+import { Tab, Tabs, TabPanel, TabPanels, TabList } from '@chakra-ui/tabs';
+
+import { useInView } from 'react-intersection-observer';
 
 import {
   MESAS_EXP,
@@ -33,15 +35,13 @@ import {
 } from '../../data';
 import Item from './Item';
 import PanelItem from './PanelItem';
-import useIntersected from '../../hooks/useIntersected';
 
 const tazaICON = '/taza.svg';
 const tazaBlueICON = '/taza-blue.svg';
 const ProgramaConectados = './Programa-ConectadosV2.pdf';
 
 const Schedule = () => {
-  const node = useRef();
-  const { show } = useIntersected({ node, margin: '0px' });
+  const { inView: show, ref: node } = useInView();
 
   return (
     <Fade in={show} delay={0.3}>

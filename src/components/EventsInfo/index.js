@@ -1,10 +1,9 @@
-import React, { useRef } from 'react';
+import React from 'react';
 
 import { Image } from '@chakra-ui/image';
 import { SlideFade } from '@chakra-ui/transition';
 import { Box, Flex, Text } from '@chakra-ui/layout';
-
-import useIntersected from '../../hooks/useIntersected';
+import { useInView } from 'react-intersection-observer';
 
 const recurso7 = './recurso7.svg';
 const recurso8 = './recurso8.svg';
@@ -12,8 +11,7 @@ const recurso9 = './recurso9.svg';
 const recurso10 = './recurso10.svg';
 
 const EventsInfo = () => {
-  const node = useRef();
-  const { show } = useIntersected({ node, margin: '0px' });
+  const { ref: node, inView: show } = useInView();
 
   return (
     <Flex
@@ -27,7 +25,7 @@ const EventsInfo = () => {
       align="center"
       justify={{ base: 'space-evenly', xl: 'space-evenly' }}
     >
-      <SlideFade in={show} offsetX="-50px" delay={0.5}>
+      <SlideFade in={show} offsetX="-50px" delay={0.2}>
         <Flex align="center" mb={{ base: 6 }} w={{ base: '72' }}>
           <Image src={recurso7} w={{ base: '28' }} objectFit="contain" />
           <Box ml={5}>
@@ -46,7 +44,7 @@ const EventsInfo = () => {
           </Box>
         </Flex>
       </SlideFade>
-      <SlideFade in={show} offsetX="-50px" delay={1}>
+      <SlideFade in={show} offsetX="-50px" delay={0.4}>
         <Flex
           mt={-1.5}
           align="center"
@@ -70,7 +68,7 @@ const EventsInfo = () => {
           </Box>
         </Flex>
       </SlideFade>
-      <SlideFade in={show} offsetX="50px" delay={1}>
+      <SlideFade in={show} offsetX="50px" delay={0.6}>
         <Flex
           alignItems="flex-start"
           mt={-1.5}
@@ -94,7 +92,7 @@ const EventsInfo = () => {
           </Box>
         </Flex>
       </SlideFade>
-      <SlideFade in={show} offsetX="50px" delay={1}>
+      <SlideFade in={show} offsetX="50px" delay={0.8}>
         <Flex
           mt={-1.5}
           align="center"

@@ -1,10 +1,8 @@
+import React from 'react';
 import { Image } from '@chakra-ui/image';
-import { Grid } from '@chakra-ui/layout';
-import { Heading } from '@chakra-ui/layout';
-import { Container } from '@chakra-ui/layout';
 import { SlideFade } from '@chakra-ui/transition';
-import React, { useRef } from 'react';
-import useIntersected from '../../hooks/useIntersected';
+import { Container, Heading, Grid } from '@chakra-ui/layout';
+import { useInView } from 'react-intersection-observer';
 
 const aliado1 = './aliado1.png';
 const aliado2 = './aliado2.png';
@@ -14,8 +12,7 @@ const aliado6 = './aliado6.png';
 const aliado8 = './aliado8.png';
 
 const Aliados = () => {
-  const node = useRef();
-  const { show } = useIntersected({ node, margin: '0px' });
+  const { ref: node, inView: show } = useInView();
 
   return (
     <Container

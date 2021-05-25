@@ -38,7 +38,7 @@ const Navbar = () => {
           w="100%"
           pos="fixed"
           minH="60px"
-          shadow="xl"
+          shadow={isScrolling > 50 ? 'none' : 'xl'}
           style={{ zIndex: 2 }}
           transitionProperty="background"
           transitionDuration="0.3s"
