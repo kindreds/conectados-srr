@@ -13,7 +13,7 @@ import { SlideFade } from '@chakra-ui/transition';
 import Sidebar from '../Sidebar';
 import DesktopNav from './DesktopNav';
 
-const ministerioIMG = './ministerio.webp';
+const ministerioIMG = 'https://conectados-srr.vercel.app/ministerio.webp';
 
 const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();

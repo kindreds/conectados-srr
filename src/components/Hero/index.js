@@ -8,10 +8,10 @@ import { Flex } from '@chakra-ui/layout';
 import { Image } from '@chakra-ui/image';
 import { SlideFade } from '@chakra-ui/transition';
 
-const dotIMG = './dot.webp';
-const heroIMG = './hero.webp';
-const dotsIMG = './dots.webp';
-const cruzIMG = './cruz.webp';
+const dotIMG = 'https://conectados-srr.vercel.app/dot.webp';
+const heroIMG = 'https://conectados-srr.vercel.app/hero.webp';
+const dotsIMG = 'https://conectados-srr.vercel.app/dots.webp';
+const cruzIMG = 'https://conectados-srr.vercel.app/cruz.webp';
 
 const Hero = () => {
   return (

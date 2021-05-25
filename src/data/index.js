@@ -1,30 +1,35 @@
-const PaulMoch = '/PaulMoch.webp';
-const JoseMori = '/JoseMori.webp';
-const JennyRios = '/JennyRios.webp';
-const AnaRomero = '/AnaRomero.webp';
-const IsabelDiez = '/IsabelDiez.webp';
-const AndreaPozo = '/AndreaPozo.webp';
-const JorgeBossio = '/JorgeBossio.webp';
-const RafaelPuyol = '/RafaelPuyol.webp';
-const RosaArevalo = '/RosaArevalo.webp';
-const DiegoMendoza = '/DiegoMendoza.webp';
-const XimenaGarcía = '/XimenaGarcía.webp';
-const AitorAlvarez = '/AitorAlvarez.webp';
-const JulianaRojas = '/JulianaRojas.webp';
-const MariaSoledad = '/MariaSoledad.webp';
-const RicardoPareja = '/RicardoPareja.webp';
-const LorenaCornejo = '/LorenaCornejo.webp';
-const CarmeEscolano = '/CarmeEscolano.webp';
-const IreneHerreros = '/IreneHerreros.webp';
-const FrancescPedro = '/FrancescPedro.webp';
-const RubenGonzalez = '/RubenGonzalez.webp';
-const VictoriaLanda = '/VictoriaLanda.webp';
-const MariaSanMartin = '/MariaSanMartin.webp';
-const SilviaLavandera = '/SilviaLavandera.webp';
-const GioanaGarofolin = '/GioanaGarafolin.webp';
-const FranciscoGarcía = '/FranciscoGarcía.webp';
-const CarolinaZumaglini = '/CarolinaZumaglini.webp';
-const FranciscoCervantes = '/FranciscoCervantes.webp';
+const PaulMoch = 'https://conectados-srr.vercel.app/PaulMoch.webp';
+const JoseMori = 'https://conectados-srr.vercel.app/JoseMori.webp';
+const JennyRios = 'https://conectados-srr.vercel.app/JennyRios.webp';
+const AnaRomero = 'https://conectados-srr.vercel.app/AnaRomero.webp';
+const IsabelDiez = 'https://conectados-srr.vercel.app/IsabelDiez.webp';
+const AndreaPozo = 'https://conectados-srr.vercel.app/AndreaPozo.webp';
+const JorgeBossio = 'https://conectados-srr.vercel.app/JorgeBossio.webp';
+const RafaelPuyol = 'https://conectados-srr.vercel.app/RafaelPuyol.webp';
+const RosaArevalo = 'https://conectados-srr.vercel.app/RosaArevalo.webp';
+const DiegoMendoza = 'https://conectados-srr.vercel.app/DiegoMendoza.webp';
+const XimenaGarcía = 'https://conectados-srr.vercel.app/XimenaGarcía.webp';
+const AitorAlvarez = 'https://conectados-srr.vercel.app/AitorAlvarez.webp';
+const JulianaRojas = 'https://conectados-srr.vercel.app/JulianaRojas.webp';
+const MariaSoledad = 'https://conectados-srr.vercel.app/MariaSoledad.webp';
+const RicardoPareja = 'https://conectados-srr.vercel.app/RicardoPareja.webp';
+const LorenaCornejo = 'https://conectados-srr.vercel.app/LorenaCornejo.webp';
+const CarmeEscolano = 'https://conectados-srr.vercel.app/CarmeEscolano.webp';
+const IreneHerreros = 'https://conectados-srr.vercel.app/IreneHerreros.webp';
+const FrancescPedro = 'https://conectados-srr.vercel.app/FrancescPedro.webp';
+const RubenGonzalez = 'https://conectados-srr.vercel.app/RubenGonzalez.webp';
+const VictoriaLanda = 'https://conectados-srr.vercel.app/VictoriaLanda.webp';
+const MariaSanMartin = 'https://conectados-srr.vercel.app/MariaSanMartin.webp';
+const SilviaLavandera =
+  'https://conectados-srr.vercel.app/SilviaLavandera.webp';
+const GioanaGarofolin =
+  'https://conectados-srr.vercel.app/GioanaGarafolin.webp';
+const FranciscoGarcía =
+  'https://conectados-srr.vercel.app/FranciscoGarcía.webp';
+const CarolinaZumaglini =
+  'https://conectados-srr.vercel.app/CarolinaZumaglini.webp';
+const FranciscoCervantes =
+  'https://conectados-srr.vercel.app/FranciscoCervantes.webp';
 
 export const speakers = [
   {
