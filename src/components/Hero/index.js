@@ -9,8 +9,7 @@ import { Image } from '@chakra-ui/image';
 import { SlideFade } from '@chakra-ui/transition';
 
 const dotIMG = 'https://conectados-srr.vercel.app/dot.webp';
-const heroIMG =
-  'https://api.kirasportswear.com/storage/app/imagenesGenerales/2021-03/shenaz_portada-3.webp';
+const heroIMG = 'https://conectados-srr.vercel.app/hero.webp';
 const dotsIMG = 'https://conectados-srr.vercel.app/dots.webp';
 const cruzIMG = 'https://conectados-srr.vercel.app/cruz.webp';
 
