@@ -29,13 +29,13 @@ const ItemDesktop = ({ color, avatars, description, hour, header, temas }) => {
     <AccordionItem w="100%" borderColor="transparent">
       <Box w="100%" display={'flex'}>
         {!avatars ? null : avatars.length === 1 ? (
-          <Avatar mr={2} mb={6} src={avatars[0]} size="xl" />
+          <Avatar loading="lazy" mr={2} mb={6} src={avatars[0]} size="xl" />
         ) : (
           <Box mr={2} mb={4} w="100px" h="100%" maxW="100px" maxH="100px">
             <Slider {...settings}>
               {avatars.map((avatar, i) => (
                 <Box key={i} borderRadius="50%">
-                  <Avatar src={avatar} size="xl" />
+                  <Avatar loading="lazy" src={avatar} size="xl" />
                 </Box>
               ))}
             </Slider>

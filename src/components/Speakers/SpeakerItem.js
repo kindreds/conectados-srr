@@ -23,12 +23,13 @@ const SpeakerItem = ({ id, name, avatar, description, handleOpenModal }) => {
     >
       <Avatar
         mb={2}
+        loading="lazy"
+        w="128px"
+        h="128px"
         size="2xl"
         name={name}
         src={avatar}
         cursor="pointer"
-        w="128px"
-        h="128px"
         bg="transparent"
         transition="opacity 0.3s"
         _hover={{ opacity: 0.5 }}

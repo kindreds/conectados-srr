@@ -29,13 +29,13 @@ const ItemMobile = ({ color, avatars, description, hour, header, temas }) => {
     <>
       <Flex mb={2} align="center">
         {!avatars ? null : avatars.length === 1 ? (
-          <Avatar src={avatars[0]} size="xl" />
+          <Avatar loading="lazy" src={avatars[0]} size="xl" />
         ) : (
           <Box w="100px" h="100%" maxW="100px" maxH="100px">
             <Slider {...settings}>
               {avatars.map((avatar, i) => (
                 <Box key={i} borderRadius="50%">
-                  <Avatar src={avatar} size="xl" />
+                  <Avatar loading="lazy" src={avatar} size="xl" />
                 </Box>
               ))}
             </Slider>

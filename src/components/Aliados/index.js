@@ -43,12 +43,12 @@ const Aliados = () => {
             xl: 'repeat(3, 220px)',
           }}
         >
-          <Image mb={6} mx="auto" maxW="100%" src={aliado1} />
-          <Image mb={6} mx="auto" maxW="90%" src={aliado2} />
-          <Image mb={6} mx="auto" maxW="100%" src={aliado3} />
-          <Image mb={6} mx="auto" maxW="100%" src={aliado5} />
-          <Image mb={6} mx="auto" maxW="100%" src={aliado6} />
-          <Image mb={6} mx="auto" maxW="100%" src={aliado8} />
+          <Image loading="lazy" mb={6} mx="auto" maxW="100%" src={aliado1} />
+          <Image loading="lazy" mb={6} mx="auto" maxW="90%" src={aliado2} />
+          <Image loading="lazy" mb={6} mx="auto" maxW="100%" src={aliado3} />
+          <Image loading="lazy" mb={6} mx="auto" maxW="100%" src={aliado5} />
+          <Image loading="lazy" mb={6} mx="auto" maxW="100%" src={aliado6} />
+          <Image loading="lazy" mb={6} mx="auto" maxW="100%" src={aliado8} />
         </Grid>
       </SlideFade>
     </Container>

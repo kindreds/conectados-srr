@@ -24,8 +24,12 @@ const ANUPP_LOGO = './aliado7.png';
 const UNIR_LOGO = './logo-unir.png';
 const IESALC_LOGO = './aliado4.png';
 
-const Speakers = dynamic(() => import('../components/Speakers'), { ssr: false });
-const Schedule = dynamic(() => import('../components/Schedule'), { ssr: false });
+const Speakers = dynamic(() => import('../components/Speakers'), {
+  ssr: false,
+});
+const Schedule = dynamic(() => import('../components/Schedule'), {
+  ssr: false,
+});
 const Section = dynamic(() => import('../components/Section'), { ssr: false });
 const Aliados = dynamic(() => import('../components/Aliados'), { ssr: false });
 
@@ -70,10 +74,10 @@ const Index = () => {
                 xl: 'repeat(4, 200px)',
               }}
             >
-              <Image mx="auto" maxW={52} src={UNIR_LOGO} />
-              <Image mx="auto" maxW={52} src={UTEC_LOGO} />
-              <Image mx="auto" maxW={40} src={IESALC_LOGO} />
-              <Image mx="auto" maxW={48} src={ANUPP_LOGO} />
+              <Image loading="lazy" mx="auto" maxW={52} src={UNIR_LOGO} />
+              <Image loading="lazy" mx="auto" maxW={52} src={UTEC_LOGO} />
+              <Image loading="lazy" mx="auto" maxW={40} src={IESALC_LOGO} />
+              <Image loading="lazy" mx="auto" maxW={48} src={ANUPP_LOGO} />
             </Grid>
           </SlideFade>
         </Container>
