@@ -13,7 +13,7 @@ import { SlideFade } from '@chakra-ui/transition';
 import Sidebar from '../Sidebar';
 import DesktopNav from './DesktopNav';
 
-const ministerioIMG = 'https://conectados-srr.vercel.app/ministerio.webp';
+const ministerioIMG = '/ministerio.png';
 
 const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
@@ -32,7 +32,7 @@ const Navbar = () => {
 
   return (
     <>
-      <SlideFade offsetY="-100px" in={true} delay={1}>
+      <SlideFade offsetY="-100px" in={true}>
         <Box
           top={0}
           w="100%"

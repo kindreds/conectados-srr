@@ -18,16 +18,16 @@ import InfoSection from '../components/Section/InfoSection';
 import useIntersected from '../hooks/useIntersected';
 import { congreso, metodologia } from '../components/Section/data';
 
-const UTEC_LOGO = './utec.webp';
-const FOOTER_IMG = './footer.webp';
-const ANUPP_LOGO = './aliado7.webp';
-const UNIR_LOGO = './logo-unir.webp';
-const IESALC_LOGO = './aliado4.webp';
+const UTEC_LOGO = './utec.png';
+const FOOTER_IMG = './footer.jpg';
+const ANUPP_LOGO = './aliado7.png';
+const UNIR_LOGO = './logo-unir.png';
+const IESALC_LOGO = './aliado4.png';
 
-const Speakers = dynamic(() => import('../components/Speakers'), { ssr: true });
-const Schedule = dynamic(() => import('../components/Schedule'), { ssr: true });
-const Section = dynamic(() => import('../components/Section'), { ssr: true });
-const Aliados = dynamic(() => import('../components/Aliados'), { ssr: true });
+const Speakers = dynamic(() => import('../components/Speakers'), { ssr: false });
+const Schedule = dynamic(() => import('../components/Schedule'), { ssr: false });
+const Section = dynamic(() => import('../components/Section'), { ssr: false });
+const Aliados = dynamic(() => import('../components/Aliados'), { ssr: false });
 
 const Index = () => {
   const node = useRef();

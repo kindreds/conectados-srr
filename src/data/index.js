@@ -1,35 +1,30 @@
-const PaulMoch = 'https://conectados-srr.vercel.app/PaulMoch.webp';
-const JoseMori = 'https://conectados-srr.vercel.app/JoseMori.webp';
-const JennyRios = 'https://conectados-srr.vercel.app/JennyRios.webp';
-const AnaRomero = 'https://conectados-srr.vercel.app/AnaRomero.webp';
-const IsabelDiez = 'https://conectados-srr.vercel.app/IsabelDiez.webp';
-const AndreaPozo = 'https://conectados-srr.vercel.app/AndreaPozo.webp';
-const JorgeBossio = 'https://conectados-srr.vercel.app/JorgeBossio.webp';
-const RafaelPuyol = 'https://conectados-srr.vercel.app/RafaelPuyol.webp';
-const RosaArevalo = 'https://conectados-srr.vercel.app/RosaArevalo.webp';
-const DiegoMendoza = 'https://conectados-srr.vercel.app/DiegoMendoza.webp';
-const XimenaGarcía = 'https://conectados-srr.vercel.app/XimenaGarcía.webp';
-const AitorAlvarez = 'https://conectados-srr.vercel.app/AitorAlvarez.webp';
-const JulianaRojas = 'https://conectados-srr.vercel.app/JulianaRojas.webp';
-const MariaSoledad = 'https://conectados-srr.vercel.app/MariaSoledad.webp';
-const RicardoPareja = 'https://conectados-srr.vercel.app/RicardoPareja.webp';
-const LorenaCornejo = 'https://conectados-srr.vercel.app/LorenaCornejo.webp';
-const CarmeEscolano = 'https://conectados-srr.vercel.app/CarmeEscolano.webp';
-const IreneHerreros = 'https://conectados-srr.vercel.app/IreneHerreros.webp';
-const FrancescPedro = 'https://conectados-srr.vercel.app/FrancescPedro.webp';
-const RubenGonzalez = 'https://conectados-srr.vercel.app/RubenGonzalez.webp';
-const VictoriaLanda = 'https://conectados-srr.vercel.app/VictoriaLanda.webp';
-const MariaSanMartin = 'https://conectados-srr.vercel.app/MariaSanMartin.webp';
-const SilviaLavandera =
-  'https://conectados-srr.vercel.app/SilviaLavandera.webp';
-const GioanaGarofolin =
-  'https://conectados-srr.vercel.app/GioanaGarafolin.webp';
-const FranciscoGarcía =
-  'https://conectados-srr.vercel.app/FranciscoGarcía.webp';
-const CarolinaZumaglini =
-  'https://conectados-srr.vercel.app/CarolinaZumaglini.webp';
-const FranciscoCervantes =
-  'https://conectados-srr.vercel.app/FranciscoCervantes.webp';
+const PaulMoch = '/PaulMoch.jpg';
+const JoseMori = '/JoseMori.jpg';
+const JennyRios = '/JennyRios.jpg';
+const AnaRomero = '/AnaRomero.jpg';
+const IsabelDiez = '/IsabelDiez.jpg';
+const AndreaPozo = '/AndreaPozo.jpg';
+const JorgeBossio = '/JorgeBossio.jpg';
+const RafaelPuyol = '/RafaelPuyol.jpg';
+const RosaArevalo = '/RosaArevalo.jpg';
+const DiegoMendoza = '/DiegoMendoza.jpg';
+const XimenaGarcia = '/XimenaGarcia.jpg';
+const AitorAlvarez = '/AitorAlvarez.jpg';
+const JulianaRojas = '/JulianaRojas.jpg';
+const MariaSoledad = '/MariaSoledad.jpg';
+const RicardoPareja = '/RicardoPareja.jpg';
+const LorenaCornejo = '/LorenaCornejo.jpg';
+const CarmeEscolano = '/CarmeEscolano.jpg';
+const IreneHerreros = '/IreneHerreros.jpg';
+const FrancescPedro = '/FrancescPedro.jpg';
+const RubenGonzalez = '/RubenGonzalez.jpg';
+const VictoriaLanda = '/VictoriaLanda.jpg';
+const MariaSanMartin = '/MariaSanMartin.jpg';
+const SilviaLavandera = '/SilviaLavandera.jpg';
+const GioanaGarofolin = '/GioanaGarafolin.jpg';
+const FranciscoGarcía = '/FranciscoGarcía.jpg';
+const CarolinaZumaglini = '/CarolinaZumaglini.jpg';
+const FranciscoCervantes = '/FranciscoCervantes.jpg';
 
 export const speakers = [
   {
@@ -195,7 +190,7 @@ export const speakers = [
     name: 'MARÍA XIMENA GARCÍA',
     description:
       'Coordinadora Académica del Doctorado en Educación Superior Universitaria de la Universidad Austral, Universidad Abierta Interamericana y Universidad Nacional de Río Negro, Argentina.',
-    avatar: XimenaGarcía,
+    avatar: XimenaGarcia,
     fullDescription: [
       'Es Secretaria Académica y Profesora de la Maestría en Tecnología Educativa de la Universidad Abierta Interamericana. Se desempeña como Consultora en educación y tecnología en la Dirección de Educación Secundaria del Ministerio de Educación de la Nación, Argentina.',
       ' Magíster y Especialista en Educación con orientación en Gestión Educativa de la Universidad de San Andrés y Licenciada en Ciencias de la Comunicación de la Universidad de Buenos Aires, Argentina.',
@@ -327,7 +322,6 @@ export const INAGURACION = {
 
 export const CONF_MAGISTRAL = {
   color: 'primary',
-  avatar: RafaelPuyol,
   avatars: [RafaelPuyol],
   hour: '9:30 - 10:10',
   header: 'CONFERENCIA MAGISTRAL',
@@ -351,7 +345,6 @@ export const CONF_MAGISTRAL = {
 
 export const CHARLA_EXPERTOS = {
   color: 'primary',
-  avatar: FranciscoCervantes,
   avatars: [FranciscoCervantes, JorgeBossio, FranciscoGarcía],
   hour: '10:20 - 11:20',
   header: 'CHARLA CON EXPERTOS',
@@ -428,8 +421,7 @@ export const COMP_PEDAGOGICA = {
 
 export const COMP_TECNOLOGICA = {
   color: 'primary',
-  avatar: JennyRios,
-  avatars: [JennyRios, XimenaGarcía, CarolinaZumaglini],
+  avatars: [JennyRios, XimenaGarcia, CarolinaZumaglini],
   hour: '14:30 - 15:30',
   header: 'TALLER DE COMPETENCIA TECNOLÓGICA',
   description: null,
@@ -454,7 +446,7 @@ export const COMP_TECNOLOGICA = {
         'Propone abordar algunas de las principales tendencias de educación: modalidad pedagógica de aula invertida o flipped classroom, entornos inteligentes de aprendizaje y realidad aumentada.',
       speakers: [
         {
-          avatar: XimenaGarcía,
+          avatar: XimenaGarcia,
           name: 'María Ximena García Tellería',
           desc: 'Coordinadora Académica del Doctorado en Educación Superior Universitaria de la Universidad Austral, Universidad Abierta Interamericana y Universidad Nacional de Río Negro, Argentina.',
         },
@@ -511,7 +503,6 @@ export const MESAS_EXP = {
 
 export const COMP_EMOCIONAL = {
   color: 'primary',
-  avatar: AnaRomero,
   avatars: [AnaRomero, LorenaCornejo, GioanaGarofolin],
   hour: '16:50 - 17:50',
   header: 'TALLER DE COMPETENCIA EMOCIONAL',
@@ -556,7 +547,6 @@ export const COMP_EMOCIONAL = {
 
 export const CHARLA_EXPERTOS2 = {
   color: 'secundary',
-  avatar: RubenGonzalez,
   avatars: [RubenGonzalez, MariaSoledad, SilviaLavandera],
   hour: '9:00 - 10:00',
   header: 'CHARLA CON EXPERTOS',
@@ -590,7 +580,6 @@ export const CHARLA_EXPERTOS2 = {
 
 export const COMP_PEDAGOGICA2 = {
   color: 'secundary',
-  avatar: IreneHerreros,
   avatars: [IreneHerreros, AndreaPozo, PaulMoch],
   hour: '10:10 - 11:10',
   header: 'TALLER DE COMPETENCIA PEDAGÓGICA',
@@ -632,7 +621,6 @@ export const COMP_PEDAGOGICA2 = {
 
 export const COMP_TECNOLOGICA2 = {
   color: 'secundary',
-  avatar: MariaSanMartin,
   avatars: [MariaSanMartin, DiegoMendoza],
   hour: '11:20 - 12:20',
   header: 'TALLER DE COMPETENCIA TECNOLÓGICA',
@@ -670,7 +658,6 @@ export const COMP_TECNOLOGICA2 = {
 
 export const COMP_EMOCIONAL2 = {
   color: 'secundary',
-  avatar: AitorAlvarez,
   avatars: [AitorAlvarez, JulianaRojas, IsabelDiez],
   hour: '14:30 - 15:30',
   header: 'TALLER DE COMPETENCIA EMOCIONAL',
@@ -752,7 +739,6 @@ export const MESAS_EXP2 = {
 
 export const CONF_MAGISTRAL2 = {
   color: 'secundary',
-  avatar: FrancescPedro,
   avatars: [FrancescPedro],
   hour: '16:50 - 17:30',
   header: 'CONFERENCIA MAGISTRAL',

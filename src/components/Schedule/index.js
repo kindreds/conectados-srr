@@ -35,8 +35,8 @@ import Item from './Item';
 import PanelItem from './PanelItem';
 import useIntersected from '../../hooks/useIntersected';
 
-const tazaICON = './taza.svg';
-const tazaBlueICON = './taza-blue.svg';
+const tazaICON = '/taza.svg';
+const tazaBlueICON = '/taza-blue.svg';
 const ProgramaConectados = './Programa-ConectadosV2.pdf';
 
 const Schedule = () => {

@@ -6,12 +6,12 @@ import { SlideFade } from '@chakra-ui/transition';
 import React, { useRef } from 'react';
 import useIntersected from '../../hooks/useIntersected';
 
-const aliado1 = './aliado1.webp';
-const aliado2 = './aliado2.webp';
-const aliado3 = './aliado3.webp';
-const aliado5 = './aliado5.webp';
-const aliado6 = './aliado6.webp';
-const aliado8 = './aliado8.webp';
+const aliado1 = './aliado1.png';
+const aliado2 = './aliado2.png';
+const aliado3 = './aliado3.png';
+const aliado5 = './aliado5.png';
+const aliado6 = './aliado6.png';
+const aliado8 = './aliado8.png';
 
 const Aliados = () => {
   const node = useRef();

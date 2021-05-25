@@ -8,10 +8,10 @@ import { Flex } from '@chakra-ui/layout';
 import { Image } from '@chakra-ui/image';
 import { SlideFade } from '@chakra-ui/transition';
 
-const dotIMG = 'https://conectados-srr.vercel.app/dot.webp';
-const heroIMG = 'https://conectados-srr.vercel.app/hero.webp';
-const dotsIMG = 'https://conectados-srr.vercel.app/dots.webp';
-const cruzIMG = 'https://conectados-srr.vercel.app/cruz.webp';
+const dotIMG = '/dot.png';
+const heroIMG = '/hero.jpg';
+const dotsIMG = '/dots.png';
+const cruzIMG = '/cruz.png';
 
 const Hero = () => {
   return (
@@ -87,12 +87,12 @@ const Hero = () => {
             right="10%"
             src={dotIMG}
           />
-          <SlideFade offsetX="-100px" in={true} delay={1}>
+          <SlideFade offsetX="-100px" in={true}>
             <Flex className="hero__slogan" mb={{ base: 10, lg: 0 }}>
               <HeroContent width="100%" />
             </Flex>
           </SlideFade>
-          <SlideFade offsetX="100px" in={true} delay={1}>
+          <SlideFade offsetX="100px" in={true}>
             <Button
               as="a"
               href={
