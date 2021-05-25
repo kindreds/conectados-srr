@@ -1,7 +1,9 @@
-import { useBreakpointValue } from '@chakra-ui/media-query';
 import React from 'react';
-import ItemDesktop from './ItemDesktop';
-import ItemMobile from './ItemMobile';
+import dynamic from 'next/dynamic';
+import { useBreakpointValue } from '@chakra-ui/media-query';
+
+const ItemDesktop = dynamic(() => import('./ItemDesktop'));
+const ItemMobile = dynamic(() => import('./ItemMobile'));
 
 const PanelItem = (props) => {
   const isDesktop = useBreakpointValue({
@@ -13,6 +15,7 @@ const PanelItem = (props) => {
     ms: false,
     base: false,
   });
+
   return (
     <>
       {typeof isDesktop === 'undefined' ? (

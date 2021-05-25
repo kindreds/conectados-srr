@@ -1,9 +1,9 @@
 import React, { useRef, useState } from 'react';
+import dynamic from 'next/dynamic';
 import Slider from 'react-slick';
 import { useDisclosure } from '@chakra-ui/hooks';
 import { Container, Heading, Box } from '@chakra-ui/layout';
 
-import Modal from '../Modal';
 import { speakers } from '../../data';
 import SpeakerItem from './SpeakerItem';
 import { SlideFade } from '@chakra-ui/transition';
@@ -12,6 +12,8 @@ import useIntersected from '../../hooks/useIntersected';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { useBreakpointValue } from '@chakra-ui/media-query';
+
+const Modal = dynamic(() => import('../Modal'));
 
 const Speakers = () => {
   const [ID, setID] = useState(0);
