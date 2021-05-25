@@ -1,19 +1,20 @@
 import React, { useRef } from 'react';
+import dynamic from 'next/dynamic';
 import { Image } from '@chakra-ui/image';
+import { SlideFade } from '@chakra-ui/transition';
 import { Container, Heading, Box, Divider, Grid } from '@chakra-ui/layout';
 
 import Hero from '../components/Hero';
 import Info from '../components/Info';
 import Navbar from '../components/Navbar';
-import Section from '../components/Section';
-import Speakers from '../components/Speakers';
-import Schedule from '../components/Schedule';
+// import Aliados from '../components/Aliados';
+// import Section from '../components/Section';
+// import Speakers from '../components/Speakers';
+// import Schedule from '../components/Schedule';
 import Countdown from '../components/Countdown';
 import EventsInfo from '../components/EventsInfo';
 import InfoSection from '../components/Section/InfoSection';
 
-import Aliados from '../components/Aliados';
-import { SlideFade } from '@chakra-ui/transition';
 import useIntersected from '../hooks/useIntersected';
 import { congreso, metodologia } from '../components/Section/data';
 
@@ -22,6 +23,11 @@ const FOOTER_IMG = './footer.webp';
 const ANUPP_LOGO = './aliado7.webp';
 const UNIR_LOGO = './logo-unir.webp';
 const IESALC_LOGO = './aliado4.webp';
+
+const Speakers = dynamic(() => import('../components/Speakers'), { ssr: true });
+const Schedule = dynamic(() => import('../components/Schedule'), { ssr: true });
+const Section = dynamic(() => import('../components/Section'), { ssr: true });
+const Aliados = dynamic(() => import('../components/Aliados'), { ssr: true });
 
 const Index = () => {
   const node = useRef();
