@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Image } from '@chakra-ui/image';
 import { SlideFade } from '@chakra-ui/transition';
@@ -11,7 +11,12 @@ const recurso9 = './recurso9.svg';
 const recurso10 = './recurso10.svg';
 
 const EventsInfo = () => {
+  const [hasView, setHasView] = useState(false);
   const { ref: node, inView: show } = useInView();
+
+  useEffect(() => {
+    if (show) return setHasView(true);
+  }, [show]);
 
   return (
     <Flex
@@ -27,7 +32,9 @@ const EventsInfo = () => {
     >
       <SlideFade in={show} offsetX="-50px" delay={0.2}>
         <Flex align="center" mb={{ base: 6 }} w={{ base: '72' }}>
-          <Image src={recurso7} w={{ base: '28' }} objectFit="contain" />
+          {hasView && (
+            <Image src={recurso7} w={{ base: '28' }} objectFit="contain" />
+          )}
           <Box ml={5}>
             <Text
               color="#fff"
@@ -51,7 +58,9 @@ const EventsInfo = () => {
           mb={{ base: 6, lg: 4 }}
           w={{ base: '72' }}
         >
-          <Image src={recurso8} w={{ base: '28' }} objectFit="contain" />
+          {hasView && (
+            <Image src={recurso8} w={{ base: '28' }} objectFit="contain" />
+          )}
           <Box ml={5}>
             <Text
               color="#fff"
@@ -76,7 +85,9 @@ const EventsInfo = () => {
           mb={{ base: 6, lg: 4 }}
           w={{ base: '72' }}
         >
-          <Image src={recurso9} w={{ base: '28' }} objectFit="contain" />
+          {hasView && (
+            <Image src={recurso9} w={{ base: '28' }} objectFit="contain" />
+          )}
           <Box ml={5}>
             <Text
               color="#fff"
@@ -99,7 +110,9 @@ const EventsInfo = () => {
           mb={{ base: 6, lg: 4 }}
           w={{ base: '72' }}
         >
-          <Image src={recurso10} w={{ base: '28' }} objectFit="contain" />
+          {hasView && (
+            <Image src={recurso10} w={{ base: '28' }} objectFit="contain" />
+          )}
           <Box ml={5}>
             <Text
               color="#fff"

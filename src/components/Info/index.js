@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Image } from '@chakra-ui/image';
 import { ScaleFade, SlideFade } from '@chakra-ui/transition';
 import { Box, Flex, Heading, Text, Stack } from '@chakra-ui/layout';
@@ -10,7 +10,12 @@ const recurso2 = './recurso2.svg';
 const recurso3 = './recurso3.svg';
 
 const Info = () => {
+  const [hasView, setHasView] = useState(false);
   const { inView: show, ref: node } = useInView();
+
+  useEffect(() => {
+    if (show) return setHasView(true);
+  }, [show]);
 
   return (
     <Stack
@@ -26,7 +31,9 @@ const Info = () => {
     >
       <SlideFade offsetX="20px" in={show} delay={0.5}>
         <Flex align="center" minW={72}>
-          <Image src={recurso1} w={{ base: 85 }} objectFit="contain" />
+          {hasView && (
+            <Image src={recurso1} w={{ base: 85 }} objectFit="contain" />
+          )}
           <Box ml={5}>
             <Heading color="#fff" mb="-2">
               27 y 28
@@ -39,7 +46,9 @@ const Info = () => {
       </SlideFade>
       <ScaleFade initialScale={0.9} in={show} delay={1}>
         <Flex align="center" minW={72}>
-          <Image src={recurso2} w={{ base: 85 }} objectFit="contain" />
+          {hasView && (
+            <Image src={recurso2} w={{ base: 85 }} objectFit="contain" />
+          )}
           <Box ml={5}>
             <Heading color="#fff" mb="-2">
               Docentes
@@ -52,7 +61,9 @@ const Info = () => {
       </ScaleFade>
       <SlideFade offsetX="-20px" in={show} delay={0.5}>
         <Flex align="center" minW={72}>
-          <Image src={recurso3} w={{ base: 85 }} objectFit="contain" />
+          {hasView && (
+            <Image src={recurso3} w={{ base: 85 }} objectFit="contain" />
+          )}
           <Box ml={5}>
             <Flex align="center">
               <Heading color="#fff">9:00</Heading>

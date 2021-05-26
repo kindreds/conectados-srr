@@ -19,7 +19,7 @@ const Speakers = () => {
   const [ID, setID] = useState(0);
   const { isOpen, onToggle } = useDisclosure();
   const [hasView, setHasView] = useState(false);
-  const { inView: show, ref: node } = useInView();
+  const { inView: show, ref: node } = useInView({ rootMargin: '100px' });
   const row = useBreakpointValue({
     base: 1,
     ms: 1,

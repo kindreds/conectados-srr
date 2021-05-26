@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button } from '@chakra-ui/button';
 import { Container, Heading, Text, Box } from '@chakra-ui/layout';
 
@@ -16,7 +16,12 @@ const Section = ({
   fileName,
   children,
 }) => {
+  const [hasView, setHasView] = useState(false);
   const { inView: show, ref: node } = useInView();
+
+  useEffect(() => {
+    if (show) return setHasView(true);
+  }, [show]);
 
   return (
     <Box bg={color === 'primary' ? 'bgGray' : 'bgWhite'}>
@@ -39,7 +44,7 @@ const Section = ({
           >
             {content}
           </Text>
-          {children}
+          {hasView && children}
           <Button
             maxW="sm"
             as={file ? 'a' : 'button'}
