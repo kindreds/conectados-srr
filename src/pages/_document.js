@@ -6,6 +6,21 @@ export default class Document extends NextDocument {
     return (
       <Html>
         <Head>
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-180192746-5"
+          />
+
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'UA-180192746-5');
+              `,
+            }}
+          />
           <meta charSet="utf-8" />
           <link rel="icon" href="/favicon.png" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
