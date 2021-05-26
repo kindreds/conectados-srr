@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Image } from '@chakra-ui/image';
 import { SlideFade } from '@chakra-ui/transition';
 import { Container, Heading, Grid } from '@chakra-ui/layout';
@@ -12,7 +12,12 @@ const aliado6 = './aliado6.png';
 const aliado8 = './aliado8.png';
 
 const Aliados = () => {
+  const [hasView, setHasView] = useState(false);
   const { ref: node, inView: show } = useInView();
+
+  useEffect(() => {
+    if (show) return setHasView(true);
+  }, [show]);
 
   return (
     <Container
@@ -40,12 +45,48 @@ const Aliados = () => {
             xl: 'repeat(3, 220px)',
           }}
         >
-          <Image loading="lazy" mb={6} mx="auto" maxW="100%" src={aliado1} />
-          <Image loading="lazy" mb={6} mx="auto" maxW="90%" src={aliado2} />
-          <Image loading="lazy" mb={6} mx="auto" maxW="100%" src={aliado3} />
-          <Image loading="lazy" mb={6} mx="auto" maxW="100%" src={aliado5} />
-          <Image loading="lazy" mb={6} mx="auto" maxW="100%" src={aliado6} />
-          <Image loading="lazy" mb={6} mx="auto" maxW="100%" src={aliado8} />
+          <Image
+            loading="lazy"
+            mb={6}
+            mx="auto"
+            maxW="100%"
+            src={hasView && aliado1}
+          />
+          <Image
+            loading="lazy"
+            mb={6}
+            mx="auto"
+            maxW="90%"
+            src={hasView && aliado2}
+          />
+          <Image
+            loading="lazy"
+            mb={6}
+            mx="auto"
+            maxW="100%"
+            src={hasView && aliado3}
+          />
+          <Image
+            loading="lazy"
+            mb={6}
+            mx="auto"
+            maxW="100%"
+            src={hasView && aliado5}
+          />
+          <Image
+            loading="lazy"
+            mb={6}
+            mx="auto"
+            maxW="100%"
+            src={hasView && aliado6}
+          />
+          <Image
+            loading="lazy"
+            mb={6}
+            mx="auto"
+            maxW="100%"
+            src={hasView && aliado8}
+          />
         </Grid>
       </SlideFade>
     </Container>

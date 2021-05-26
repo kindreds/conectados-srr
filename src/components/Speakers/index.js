@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import Slider from 'react-slick';
 import { useDisclosure } from '@chakra-ui/hooks';
@@ -18,6 +18,7 @@ const Modal = dynamic(() => import('../Modal'));
 const Speakers = () => {
   const [ID, setID] = useState(0);
   const { isOpen, onToggle } = useDisclosure();
+  const [hasView, setHasView] = useState(false);
   const { inView: show, ref: node } = useInView();
   const row = useBreakpointValue({
     base: 1,
@@ -28,6 +29,10 @@ const Speakers = () => {
     xl: 3,
     '1xl': 3,
   });
+
+  useEffect(() => {
+    if (show) return setHasView(true);
+  }, [show]);
 
   const handleOpenModal = (id) => {
     setID(id);
@@ -63,12 +68,13 @@ const Speakers = () => {
           >
             INVITADOS
           </Heading>
-          <Box ref={node} maxW="1200px" maxH="500px">
+          <Box ref={node} maxW="1200px" maxH="500px" minH="500px">
             <Slider slidesToScroll={row} {...settings}>
               {speakers.map((item, i) => (
                 <SpeakerItem
                   key={i}
                   {...item}
+                  show={hasView}
                   handleOpenModal={handleOpenModal}
                 />
               ))}

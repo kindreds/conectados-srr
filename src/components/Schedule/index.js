@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Text,
   Flex,
@@ -41,7 +41,12 @@ const tazaBlueICON = '/taza-blue.svg';
 const ProgramaConectados = './Programa-ConectadosV2.pdf';
 
 const Schedule = () => {
+  const [hasView, sethasView] = useState(false);
   const { inView: show, ref: node } = useInView();
+
+  useEffect(() => {
+    if (show) return sethasView(true);
+  }, [show]);
 
   return (
     <Fade in={show} delay={0.3}>
@@ -81,98 +86,114 @@ const Schedule = () => {
           <TabPanels>
             {/* TAB DAY ONE */}
             <TabPanel>
-              <Accordion allowToggle>
-                <Stack
-                  spacing={4}
-                  divider={
-                    <Divider
-                      orientation="horizontal"
-                      w="100%"
-                      borderColor="#e2e2e2"
-                    />
-                  }
-                >
-                  <Item {...INAGURACION} />
-                  <PanelItem {...CONF_MAGISTRAL} />
-                  <PanelItem {...CHARLA_EXPERTOS} />
-                  <PanelItem {...COMP_PEDAGOGICA} />
-                  <PanelItem {...TRANS_DIGITAL} />
-                </Stack>
+              {hasView && (
+                <Accordion allowToggle>
+                  <Stack
+                    spacing={4}
+                    divider={
+                      <Divider
+                        orientation="horizontal"
+                        w="100%"
+                        borderColor="#e2e2e2"
+                      />
+                    }
+                  >
+                    <Item {...INAGURACION} />
+                    <PanelItem show={hasView} {...CONF_MAGISTRAL} />
+                    <PanelItem show={hasView} {...CHARLA_EXPERTOS} />
+                    <PanelItem show={hasView} {...COMP_PEDAGOGICA} />
+                    <PanelItem show={hasView} {...TRANS_DIGITAL} />
+                  </Stack>
 
-                <Flex bg="bgGray" py={2} px={4} justify="space-between" my={6}>
                   <Flex
-                    display={{ base: 'none', md: 'block' }}
-                    justify="center"
-                    w="100px"
-                    mr={2}
+                    bg="bgGray"
+                    py={2}
+                    px={4}
+                    justify="space-between"
+                    my={6}
                   >
-                    <Image w="30px" src={tazaBlueICON} />
+                    <Flex
+                      display={{ base: 'none', md: 'block' }}
+                      justify="center"
+                      w="100px"
+                      mr={2}
+                    >
+                      <Image w="30px" src={tazaBlueICON} />
+                    </Flex>
+                    <Text
+                      fontSize="lg"
+                      textAlign="center"
+                      fontWeight="bold"
+                      color="primary"
+                    >
+                      13:30 - 14:30
+                    </Text>
+                    <Text
+                      flex={1}
+                      fontSize="lg"
+                      fontWeight="bold"
+                      textAlign="center"
+                      color="primary"
+                    >
+                      INTERMEDIO
+                    </Text>
                   </Flex>
-                  <Text
-                    fontSize="lg"
-                    textAlign="center"
-                    fontWeight="bold"
-                    color="primary"
-                  >
-                    13:30 - 14:30
-                  </Text>
-                  <Text
-                    flex={1}
-                    fontSize="lg"
-                    fontWeight="bold"
-                    textAlign="center"
-                    color="primary"
-                  >
-                    INTERMEDIO
-                  </Text>
-                </Flex>
-                <Stack spacing={4} divider={<Divider />}>
-                  <PanelItem {...COMP_TECNOLOGICA} />
-                  <PanelItem {...MESAS_EXP} />
-                  <PanelItem {...COMP_EMOCIONAL} />
+                  <Stack spacing={4} divider={<Divider />}>
+                    <PanelItem show={hasView} {...COMP_TECNOLOGICA} />
+                    <PanelItem show={hasView} {...MESAS_EXP} />
+                    <PanelItem show={hasView} {...COMP_EMOCIONAL} />
 
-                  <StackDivider />
-                </Stack>
-              </Accordion>
+                    <StackDivider />
+                  </Stack>
+                </Accordion>
+              )}
             </TabPanel>
             {/* TAB DAY TWO */}
             <TabPanel>
-              <Accordion allowToggle>
-                <Stack spacing={4} divider={<Divider />}>
-                  <PanelItem {...CHARLA_EXPERTOS2} />
-                  <PanelItem {...COMP_PEDAGOGICA2} />
-                  <PanelItem {...COMP_TECNOLOGICA2} />
-                </Stack>
-                <Flex bg="bgGray" py={2} px={4} justify="space-between" my={6}>
-                  <Flex justify="center" w="100px" mr={2}>
-                    <Image w="30px" src={tazaICON} />
+              {hasView && (
+                <Accordion allowToggle>
+                  <Stack spacing={4} divider={<Divider />}>
+                    <PanelItem show={hasView} {...CHARLA_EXPERTOS2} />
+                    <PanelItem show={hasView} {...COMP_PEDAGOGICA2} />
+                    <PanelItem show={hasView} {...COMP_TECNOLOGICA2} />
+                  </Stack>
+                  <Flex
+                    bg="bgGray"
+                    py={2}
+                    px={4}
+                    justify="space-between"
+                    my={6}
+                  >
+                    <Flex justify="center" w="100px" mr={2}>
+                      <Image w="30px" src={tazaICON} />
+                    </Flex>
+                    <Text
+                      fontSize="lg"
+                      textAlign="center"
+                      fontWeight="bold"
+                      color="secundary"
+                    >
+                      12:30 - 14:30
+                    </Text>
+                    <Text
+                      flex={1}
+                      fontSize="lg"
+                      fontWeight="bold"
+                      textAlign="center"
+                      color="secundary"
+                    >
+                      INTERMEDIO
+                    </Text>
                   </Flex>
-                  <Text
-                    fontSize="lg"
-                    textAlign="center"
-                    fontWeight="bold"
-                    color="secundary"
-                  >
-                    12:30 - 14:30
-                  </Text>
-                  <Text
-                    flex={1}
-                    fontSize="lg"
-                    fontWeight="bold"
-                    textAlign="center"
-                    color="secundary"
-                  >
-                    INTERMEDIO
-                  </Text>
-                </Flex>
-                <Stack spacing={4} divider={<Divider />}>
-                  <PanelItem {...COMP_EMOCIONAL2} />
-                  <PanelItem {...MESAS_EXP2} />
-                  <PanelItem {...CONF_MAGISTRAL2} />
-                  <Item {...CLAUSURA} />
-                  <StackDivider />
-                </Stack>
-              </Accordion>
+                  <Stack spacing={4} divider={<Divider />}>
+                    <PanelItem show={hasView} {...COMP_EMOCIONAL2} />
+                    <PanelItem show={hasView} {...MESAS_EXP2} />
+                    <PanelItem show={hasView} {...CONF_MAGISTRAL2} />
+                    <Item {...CLAUSURA} />
+                    <StackDivider />
+                  </Stack>
+                </Accordion>
+              )}
             </TabPanel>
           </TabPanels>
         </Tabs>

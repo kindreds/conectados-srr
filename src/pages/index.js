@@ -1,9 +1,6 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-import { Image } from '@chakra-ui/image';
-import { SlideFade } from '@chakra-ui/transition';
-import { useInView } from 'react-intersection-observer';
-import { Container, Heading, Box, Divider, Grid } from '@chakra-ui/layout';
+import { Heading, Box, Divider } from '@chakra-ui/layout';
 
 import Hero from '../components/Hero';
 import Info from '../components/Info';
@@ -13,12 +10,9 @@ import EventsInfo from '../components/EventsInfo';
 import InfoSection from '../components/Section/InfoSection';
 
 import { congreso, metodologia } from '../components/Section/data';
+import Organizadores from '../components/Organizadores';
 
-const UTEC_LOGO = './utec.png';
 const FOOTER_IMG = './footer.jpg';
-const ANUPP_LOGO = './aliado7.png';
-const UNIR_LOGO = './logo-unir.png';
-const IESALC_LOGO = './aliado4.png';
 
 const Speakers = dynamic(() => import('../components/Speakers'), {
   ssr: false,
@@ -30,8 +24,6 @@ const Section = dynamic(() => import('../components/Section'), { ssr: false });
 const Aliados = dynamic(() => import('../components/Aliados'), { ssr: false });
 
 const Index = () => {
-  const { inView: show, ref: node } = useInView();
-
   return (
     <>
       <Box>
@@ -46,36 +38,7 @@ const Index = () => {
         <EventsInfo />
         <Schedule />
         <Speakers />
-        {/* Coorganizadores */}
-        <Container py={{ base: 10, xl: 20 }}>
-          <SlideFade in={show} offsetY="100px">
-            <Heading
-              mb={8}
-              color="letterGray"
-              textAlign="center"
-              fontSize={{ base: '2xl', xl: '4xl' }}
-            >
-              COORGANIZADORES
-            </Heading>
-            <Grid
-              ref={node}
-              gap={{ base: 6, xl: 8 }}
-              alignItems="center"
-              justifyContent={{ base: 'center', sm: 'space-evenly' }}
-              templateColumns={{
-                base: 'repeat(1, 200px)',
-                sm: 'repeat(2, 200px)',
-                md: 'repeat(4, 200px)',
-                xl: 'repeat(4, 200px)',
-              }}
-            >
-              <Image loading="lazy" mx="auto" maxW={52} src={UNIR_LOGO} />
-              <Image loading="lazy" mx="auto" maxW={52} src={UTEC_LOGO} />
-              <Image loading="lazy" mx="auto" maxW={40} src={IESALC_LOGO} />
-              <Image loading="lazy" mx="auto" maxW={48} src={ANUPP_LOGO} />
-            </Grid>
-          </SlideFade>
-        </Container>
+        <Organizadores />
         <Divider mx="auto" w={{ base: '90%', xl: '80%' }} />
         <Aliados />
         <Box
@@ -133,10 +96,6 @@ const Index = () => {
           font-family: GothanBlack;
           src: url(./fonts/Gotham-Black.ttf);
           font-display: swap;
-        }
-
-        .avatar {
-          border-radius: 50%;
         }
       `}</style>
     </>

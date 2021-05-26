@@ -10,12 +10,14 @@ export default class Document extends NextDocument {
             as="font"
             rel="preload"
             type="font/ttf"
+            crossOrigin=""
             href="/fonts/Gothan-Book.ttf"
           />
           <link
             as="font"
             rel="preload"
             type="font/ttf"
+            crossOrigin=""
             href="/fonts/Montserrat-Bold.ttf"
           />
         </Head>

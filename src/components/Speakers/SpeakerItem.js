@@ -3,7 +3,14 @@ import { Avatar } from '@chakra-ui/avatar';
 import { Flex, Text, Box } from '@chakra-ui/layout';
 import { useBreakpointValue } from '@chakra-ui/media-query';
 
-const SpeakerItem = ({ id, name, avatar, description, handleOpenModal }) => {
+const SpeakerItem = ({
+  id,
+  name,
+  avatar,
+  description,
+  handleOpenModal,
+  show,
+}) => {
   const display = useBreakpointValue({
     base: 'none',
     ms: 'none',
@@ -23,12 +30,12 @@ const SpeakerItem = ({ id, name, avatar, description, handleOpenModal }) => {
     >
       <Avatar
         mb={2}
-        loading="lazy"
         w="128px"
         h="128px"
         size="2xl"
         name={name}
-        src={avatar}
+        loading="lazy"
+        src={show && avatar}
         cursor="pointer"
         bg="transparent"
         transition="opacity 0.3s"
